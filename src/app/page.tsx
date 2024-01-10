@@ -4,6 +4,7 @@ import logo from "../images/Ardilla-logo-white.png";
 import React from "react";
 import TimePicker from "react-time-picker";
 import 'react-time-picker/dist/TimePicker.css';
+
 // import 'react-clock/dist/Clock.css';
 import { useState } from "react";
 
@@ -14,10 +15,14 @@ export default function Home() {
 
   const [attendanceType, setAttendanceType] = useState<string | null>(null);
 
-  const handleRadioChange = (value: string) => {
+
+  
+
+  const handleRadioChange = (value: any) => {
+
     setAttendanceType((prevValue) => (prevValue === value ? null : value));
   };
-
+  
   const handleTimeChange = (time: string | Date | null) => {
     if (time !== null) {
       setSelectedTime(time as Date | string);
@@ -38,7 +43,7 @@ export default function Home() {
         Attendance Form
       </h1>
 
-      <div className="max-w-3xl mx-auto bg-white rounded-lg overflow-hidden shadow-[#3D0072] shadow-md">
+      <div className="max-w-3xl mx-auto mt-20 bg-white rounded-lg overflow-hidden shadow-[#3D0072] shadow-md">
         <div className="px-6 py-4">
           <div className="mb-4">
             <label
@@ -114,6 +119,7 @@ export default function Home() {
                 value="Clock In"
                 checked={attendanceType === "Clock In"}
                 onChange={() => handleRadioChange("Clock In")}
+                color="black"
               />
               <span style={{ color: "gray" }}> Clock in</span>
             </label>
@@ -141,16 +147,17 @@ export default function Home() {
             >
               Time:
             </label>
-            <label>
+            <label className="mt-5 pt-6">
               <TimePicker
                 onChange={handleTimeChange}
                 value={selectedTime as string | Date}
+                disableClock
               />
             </label>
           </div>
         </div>
       </div>
-
+      
       <div className="max-w-3xl mx-auto mt-10 bg-white rounded-lg overflow-hidden">
         <div className="px-0 py-4">
           <button className="bg-[#3D0072] text-white rounded-lg  mx-auto self-center w-[765px] h-[50px] px-[254px] py-[18px] shadow-inner border justify-center items-center gap-2.5 inline-flex">
@@ -161,3 +168,4 @@ export default function Home() {
     </div>
   );
 }
+

@@ -14,7 +14,7 @@ export default function Home() {
         </div>
         <h1 className="text-3xl font-bold mb-4 text-[#3D0072] text-center font-magiona-display">Closure Form</h1>
       
-    <div className="max-w-3xl mx-auto bg-white rounded-lg overflow-hidden shadow-[#3D0072] shadow-md">
+    <div className="max-w-3xl mx-auto mt-20 bg-white rounded-lg overflow-hidden shadow-[#3D0072] shadow-md">
       <div className="px-6 py-4">
         <div className="mb-4">
           <label htmlFor="category" className="block text-sm font-bold text-[#3D0072] mb-1">
