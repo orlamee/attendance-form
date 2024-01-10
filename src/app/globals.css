@@ -19,5 +19,12 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: #fff;
-  height: 100%;
+  color: #000;
+  height: 100%;;
+}
+@font-face {
+  font-family: 'Magiona Display';
+  src: url('../fonts/magiona-display.ttf') format('truetype'); /* Update the path and format as needed */
+  font-weight: normal;
+  font-style: normal;
 }
