@@ -2,17 +2,27 @@
 import Image from "next/image";
 import logo from "../images/Ardilla-logo-white.png";
 import React from "react";
-import TimePicker from 'react-time-picker';
+import TimePicker from "react-time-picker";
+import 'react-time-picker/dist/TimePicker.css';
+// import 'react-clock/dist/Clock.css';
 import { useState } from "react";
+
 export default function Home() {
-  const [selectedTime, setSelectedTime] = useState(new Date());
+  const [selectedTime, setSelectedTime] = useState<Date | string | null>(
+    new Date()
+  );
 
-  const [attendanceType, setAttendanceType] = useState(null);
+  const [attendanceType, setAttendanceType] = useState<string | null>(null);
 
-  const handleRadioChange = (value) => {
+  const handleRadioChange = (value: string) => {
     setAttendanceType((prevValue) => (prevValue === value ? null : value));
   };
 
+  const handleTimeChange = (time: string | Date | null) => {
+    if (time !== null) {
+      setSelectedTime(time as Date | string);
+    }
+  };
   return (
     <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       <div className="absolute left-6 top-0 p-6">
@@ -102,8 +112,8 @@ export default function Home() {
                 type="radio"
                 name="clockin" // Give the radio buttons in the same group the same name
                 value="Clock In"
-                checked={attendanceType === 'Clock In'}
-                  onChange={() => handleRadioChange('Clock In')}
+                checked={attendanceType === "Clock In"}
+                onChange={() => handleRadioChange("Clock In")}
               />
               <span style={{ color: "gray" }}> Clock in</span>
             </label>
@@ -111,10 +121,10 @@ export default function Home() {
               <input
                 className="mr-2 text-gray-400"
                 type="radio"
-                name="clockout" // Give the radio buttons in the same group the same name
+                name="clockout"
                 value="Clock Out"
-                checked={attendanceType === 'Clock Out'}
-                onChange={() => handleRadioChange('Clock Out')}
+                checked={attendanceType === "Clock Out"}
+                onChange={() => handleRadioChange("Clock Out")}
               />
               <span style={{ color: "gray" }}> Clock out </span>
             </label>
@@ -132,11 +142,10 @@ export default function Home() {
               Time:
             </label>
             <label>
-            <TimePicker
-              onChange={(time) => setSelectedTime(time)}
-              value={selectedTime}
-              className=" "
-            />
+              <TimePicker
+                onChange={handleTimeChange}
+                value={selectedTime as string | Date}
+              />
             </label>
           </div>
         </div>
@@ -144,7 +153,7 @@ export default function Home() {
 
       <div className="max-w-3xl mx-auto mt-10 bg-white rounded-lg overflow-hidden">
         <div className="px-0 py-4">
-          <button className="bg-[#3D0072] text-white rounded-lg  mx-auto self-center w-[765px] h-[50px] px-[254px] py-[18px] rounded-lg shadow-inner border justify-center items-center gap-2.5 inline-flex">
+          <button className="bg-[#3D0072] text-white rounded-lg  mx-auto self-center w-[765px] h-[50px] px-[254px] py-[18px] shadow-inner border justify-center items-center gap-2.5 inline-flex">
             Proceed to Capturing
           </button>
         </div>
