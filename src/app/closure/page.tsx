@@ -112,12 +112,12 @@ export default function Home() {
           </label>
           <select
         id="dropdow"
-        className="border border-gray-300 px-3 py-2 rounded-md w-full focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+        className="border border-gray-300 px-3 py-2 rounded-md w-full focus:outline-none focus:ring-[#3D0072] focus:border-[#3D0072]"
       >
         <option value="" disabled>
           Choose an option
         </option>
-        <option value="option1">Loans</option>
+        <option value="option1" className='text-[#3D0072]'>Loans</option>
         <option value="option2">Saving</option>
         <option value="option3">POF</option>
         <option value="option4">Assets Finacing</option>
@@ -136,7 +136,7 @@ export default function Home() {
           </label>
           <select
         id="dropdown"
-        className="border border-gray-300 px-3 py-2 rounded-md w-full focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+        className="border border-gray-300 bg-white px-3 py-2 rounded-md w-full focus:outline-none focus:ring-[#3D0072] focus:border-[#3D0072]"
       >
         <option value="" disabled>
           Choose an option
@@ -175,7 +175,7 @@ export default function Home() {
           <label htmlFor="time" className="block text-sm font-bold text-[#3D0072] mb-1">
           Upload Proof of Payment (Receipt):
           </label>
-          <div className="flex items-center">
+          <div className="flex mt-5 items-center">
         <label
           htmlFor="fileInput"
           className="border-gray cursor-pointer bg-white text-[#3D0072] w-full text-center py-2 px-40 rounded-md transition duration-300 hover:bg-[#3D0072] hover:text-white border border-[#3D0072]]"
