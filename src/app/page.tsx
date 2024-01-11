@@ -47,7 +47,7 @@ export default function Home() {
         <div className="px-6 py-4">
           <div className="mb-4">
             <label
-              htmlFor="category"
+              htmlFor="fname"
               className="block text-sm font-bold text-[#3D0072] mb-1"
             >
               Full Name:
@@ -66,7 +66,7 @@ export default function Home() {
         <div className="px-6 py-4">
           <div className="mb-4">
             <label
-              htmlFor="amount"
+              htmlFor="staffid"
               className="block text-sm font-bold text-[#3D0072] mb-1"
             >
               Staff ID:
@@ -86,15 +86,15 @@ export default function Home() {
         <div className="px-6 py-4">
           <div className="mb-4">
             <label
-              htmlFor="amount"
+              htmlFor="teamnumber"
               className="block text-sm font-bold text-[#3D0072] mb-1"
             >
               Team Number:
             </label>
             <input
               id="teamnumber"
-              type="text"
-              step="0.01"
+              type="number"
+              step="1"
               placeholder="Enter Team Number (E.g 100)"
               className="border-b border-gray-300 px-3 py-2 w-full focus:outline-none focus:ring-[#3D0072] focus:border-[#3D0072]"
             />
@@ -114,19 +114,19 @@ export default function Home() {
             </label>
             <label className="block">
               <input
-                className="mr-2 text-gray-400"
+               
                 type="radio"
                 name="clockin" // Give the radio buttons in the same group the same name
                 value="Clock In"
                 checked={attendanceType === "Clock In"}
                 onChange={() => handleRadioChange("Clock In")}
-                color="black"
-              />
+                className="form-radio text-[#3D0072] focus:ring-[#3D0072] focus:border-[#3D0072]"
+          />
               <span style={{ color: "gray" }}> Clock in</span>
             </label>
             <label>
               <input
-                className="mr-2 text-gray-400"
+               className="form-radio bg-[#3D0072] focus:ring-[#3D0072] focus:border-[#3D0072]"
                 type="radio"
                 name="clockout"
                 value="Clock Out"

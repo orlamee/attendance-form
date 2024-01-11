@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import logo from "../../images/Ardilla-logo-white.png";
 export default function Home() {
+  
   return (
     <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
   <div className="absolute left-6 top-0 p-6">
@@ -18,7 +19,7 @@ export default function Home() {
         <div className="max-w-3xl mx-auto mt-20 bg-white rounded-lg overflow-hidden shadow-[#3D0072] shadow-md">
       <div className="px-6 py-4">
         <div className="mb-4">
-          <label htmlFor="amount" className="block text-sm font-bold text-[#3D0072] mb-1">
+          <label htmlFor="fname" className="block text-sm font-bold text-[#3D0072] mb-1">
             Staff Full Name:
           </label>
           <input
@@ -35,7 +36,7 @@ export default function Home() {
         <div className="max-w-3xl mx-auto mt-10 bg-white rounded-lg overflow-hidden shadow-[#3D0072] shadow-md">
       <div className="px-6 py-4">
         <div className="mb-4">
-          <label htmlFor="amount" className="block text-sm font-bold text-[#3D0072] mb-1">
+          <label htmlFor="staffid" className="block text-sm font-bold text-[#3D0072] mb-1">
             Staff ID:
           </label>
           <input
@@ -52,7 +53,7 @@ export default function Home() {
         <div className="max-w-3xl mx-auto mt-10 bg-white rounded-lg overflow-hidden shadow-[#3D0072] shadow-md">
       <div className="px-6 py-4">
         <div className="mb-4">
-          <label htmlFor="category" className="block text-sm font-bold text-[#3D0072] mb-1">
+          <label htmlFor="date" className="block text-sm font-bold text-[#3D0072] mb-1">
             Date:
           </label>
           <input
@@ -68,15 +69,15 @@ export default function Home() {
         <div className="px-6 py-4">
           <div className="mb-4">
             <label
-              htmlFor="amount"
+              htmlFor="Tnumber"
               className="block text-sm font-bold text-[#3D0072] mb-1"
             >
               Team Number:
             </label>
             <input
               id="teamnumber"
-              type="text"
-              step="0.01"
+              type="number"
+              step="1"
               placeholder="Enter Team Number (E.g 100)"
               className="border-b border-gray-300 px-3 py-2 w-full focus:outline-none focus:ring-[#3D0072] focus:border-[#3D0072]"
             />
@@ -88,7 +89,7 @@ export default function Home() {
         <div className="px-6 py-4">
           <div className="mb-4">
             <label
-              htmlFor="amount"
+              htmlFor="tclosures"
               className="block text-sm font-bold text-[#3D0072] mb-1"
             >
               Total Closures (Total number of subscribers from date above)
@@ -107,11 +108,11 @@ export default function Home() {
         <div className="max-w-3xl mx-auto mt-10 bg-white rounded-lg overflow-hidden shadow-[#3D0072] shadow-md">
       <div className="px-6 py-4">
         <div className="mb-4">
-          <label htmlFor="time" className="block text-sm font-bold text-[#3D0072] mb-1">
+          <label htmlFor="Tamount" className="block text-sm font-bold text-[#3D0072] mb-1">
           Total Closures - amount equivalent (NGN of subscriber closed for the date above):
           </label>
           <input
-            id="amount"
+            id="Tamount"
             type="text"
             step="0.01"
             placeholder='Enter Amount (E.g NGN100,000)'

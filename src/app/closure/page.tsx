@@ -1,3 +1,4 @@
+"use client";
 import Image from 'next/image'
 import logo from "../../images/Ardilla-logo-white.png";
 export default function Home() {
@@ -55,7 +56,7 @@ export default function Home() {
           <input
             id="staffid"
             type="text"
-            step="0.01"
+            step="1"
             placeholder='Enter ID (E.g ARD-06-AD-1006)'
             className="border-b border-gray-300 px-3 py-2 w-full focus:outline-none focus:ring-[#3D0072] focus:border-[#3D0072]"
           />
@@ -74,8 +75,8 @@ export default function Home() {
             </label>
             <input
               id="teamnumber"
-              type="text"
-              step="0.01"
+              type="number"
+              step="1"
               placeholder="Enter Team Number (E.g 100)"
               className="border-b border-gray-300 px-3 py-2 w-full focus:outline-none focus:ring-[#3D0072] focus:border-[#3D0072]"
             />
@@ -87,7 +88,7 @@ export default function Home() {
         <div className="px-6 py-4">
           <div className="mb-4">
             <label
-              htmlFor="amount"
+              htmlFor="customername"
               className="block text-sm font-bold text-[#3D0072] mb-1"
             >
               Customer Name:
@@ -96,7 +97,7 @@ export default function Home() {
               id="customername"
               type="text"
               step="0.01"
-              placeholder="Enter Customer Number"
+              placeholder="Enter Customer Name"
               className="border-b border-gray-300 px-3 py-2 w-full focus:outline-none focus:ring-[#3D0072] focus:border-[#3D0072]"
             />
           </div>
@@ -107,7 +108,7 @@ export default function Home() {
         <div className="max-w-3xl mx-auto mt-10 bg-white rounded-lg overflow-hidden shadow-[#3D0072] shadow-md">
       <div className="px-6 py-4">
         <div className="mb-4">
-          <label htmlFor="attendance" className="block text-sm font-bold text-[#3D0072] mb-1">
+          <label htmlFor="product" className="block text-sm font-bold text-[#3D0072] mb-1">
             Product:
           </label>
           <select
@@ -131,7 +132,7 @@ export default function Home() {
         <div className="max-w-3xl mx-auto mt-10 bg-white rounded-lg overflow-hidden shadow-[#3D0072] shadow-md">
       <div className="px-6 py-4">
         <div className="mb-4">
-          <label htmlFor="attendance" className="block text-sm font-bold text-[#3D0072] mb-1">
+          <label htmlFor="payment" className="block text-sm font-bold text-[#3D0072] mb-1">
             Payment:
           </label>
           <select
@@ -155,7 +156,7 @@ export default function Home() {
         <div className="max-w-3xl mx-auto mt-10 bg-white rounded-lg overflow-hidden shadow-[#3D0072] shadow-md">
       <div className="px-6 py-4">
         <div className="mb-4">
-          <label htmlFor="time" className="block text-sm font-bold text-[#3D0072] mb-1">
+          <label htmlFor="amountP" className="block text-sm font-bold text-[#3D0072] mb-1">
             Amount Paid:
           </label>
           <input
@@ -172,7 +173,7 @@ export default function Home() {
         <div className="max-w-3xl mx-auto mt-10 bg-white rounded-lg overflow-hidden shadow-[#3D0072] shadow-md">
       <div className="px-6 py-4">
         <div className="mb-4">
-          <label htmlFor="time" className="block text-sm font-bold text-[#3D0072] mb-1">
+          <label htmlFor="POP" className="block text-sm font-bold text-[#3D0072] mb-1">
           Upload Proof of Payment (Receipt):
           </label>
           <div className="flex mt-5 items-center">
