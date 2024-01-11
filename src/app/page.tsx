@@ -109,6 +109,7 @@ export default function Home() {
               htmlFor="attendance"
               className="block text-sm font-bold text-[#3D0072] mb-1"
             >
+              
               Attendance:
             </label>
             <label className="block">
